@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class ProjectileMovement : MonoBehaviour
+{
+    public float speed = 15f;
+    public float zLimit;
+    
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
+      //  if (transform.position.z > zLimit)
+        //{
+           
+        //}
+
+    }
+}
