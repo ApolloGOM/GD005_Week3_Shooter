@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 6f;
     float horizontalInput, verticalInput;
     private int xRange = 15;
-    private int zRange = 20;
+    //private int zRange = 20;
     public GameObject projectile;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         //A way to register input
         //We need a logic to spawn an object
 
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
            projectile = Instantiate(projectile, transform.position, projectile.transform.rotation);
         }
