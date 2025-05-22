@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;
@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private int xRange = 15;
     //private int zRange = 20;
     public GameObject projectile;
-
+    public int score;
+    public TMP_Text scoreText;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+       scoreText.text = "score:  " + score;
+
         float horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
@@ -55,4 +60,6 @@ public class PlayerMovement : MonoBehaviour
         }
         #endregion
     }
+
+         
 }

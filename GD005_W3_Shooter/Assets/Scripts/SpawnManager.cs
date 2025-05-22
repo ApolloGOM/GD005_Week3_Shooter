@@ -6,11 +6,13 @@ public class SpawnManager : MonoBehaviour
     public float xRange, zRange;
     public animalInfo[] animalInformation;
     //public string[] names;
-
+    public float spawnInterval, startDelay;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       // Debug.Log(names[2]);
+        // Debug.Log(names[2]);
+        InvokeRepeating("spawnAnimals", startDelay, spawnInterval); 
     }
 
     // Update is called once per frame
@@ -18,10 +20,12 @@ public class SpawnManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L)) 
         {
-            int animalindex = Random.Range(0, animals.Length);
-            Vector3 spawnPosition = new Vector3(Random.Range(-xRange, xRange), 0, Random.Range(zRange, -zRange));
-            Instantiate(animals[animalindex], spawnPosition, Quaternion.Euler(0, Random.Range(0, 360), 0));
+            CancelInvoke("spawnAnimals");
         }
+
+
+        
+
 
 
         //[System.Serializable]
@@ -34,5 +38,11 @@ public class SpawnManager : MonoBehaviour
         //public bool isHostile;
 
     }
+    }
+    void spawnAnimals()
+    {
+        int animalindex = Random.Range(0, animals.Length);
+        Vector3 spawnPosition = new Vector3(Random.Range(-xRange, xRange), 0, Random.Range(zRange, -zRange));
+        Instantiate(animals[animalindex], spawnPosition, Quaternion.Euler(0, Random.Range(0, 360), 0));
     }
 }

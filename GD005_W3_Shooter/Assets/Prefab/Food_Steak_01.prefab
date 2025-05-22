@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2301223396389466740}
   - component: {fileID: 6774430419908901591}
   - component: {fileID: -7668133967377010769}
+  - component: {fileID: 1957618881479619864}
   m_Layer: 0
   m_Name: Food_Steak_01
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,3 +102,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   zLimit: 6
+--- !u!65 &1957618881479619864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646535726151743788}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.46739918, y: 0.11378157, z: 0.78662586}
+  m_Center: {x: 0, y: 0.056890786, z: -0.005092144}

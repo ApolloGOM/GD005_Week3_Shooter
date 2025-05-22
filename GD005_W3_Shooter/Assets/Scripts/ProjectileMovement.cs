@@ -4,12 +4,13 @@ public class ProjectileMovement : MonoBehaviour
 {
     public float speed = 15f;
     public float zLimit;
+    public float projectile;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,10 +18,14 @@ public class ProjectileMovement : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-      //  if (transform.position.z > zLimit)
-        //{
-           
-        //}
+       
 
+
+        //  if (transform.position.z > zLimit)
+        //{
+
+        //}
     }
 }
+    
+    
