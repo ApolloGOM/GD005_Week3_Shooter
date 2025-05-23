@@ -19,20 +19,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       scoreText.text = "score:  " + score;
-
-        float horizontalInput = Input.GetAxis("Horizontal");
+       float horizontalInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
-        
+
+        scoreText.text = "Score: " + score;
+
         //Shooting mechanic
         //A way to register input
         //We need a logic to spawn an object
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-           projectile = Instantiate(projectile, transform.position, projectile.transform.rotation);
+           Instantiate(projectile, transform.position, projectile.transform.rotation);
         }
         #region
         if (transform.position.x < -xRange)

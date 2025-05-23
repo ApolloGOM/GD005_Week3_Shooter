@@ -3050,8 +3050,9 @@ GameObject:
   - component: {fileID: 760397223730410529}
   - component: {fileID: -8461511444105169339}
   - component: {fileID: 6063626343750544253}
+  - component: {fileID: 5014657616231835340}
   m_Layer: 0
-  m_Name: Dog_GermanShepherd_01
+  m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3166,6 +3167,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09948156, y: 0.28649244, z: 0.30950555}
   m_Center: {x: -0.00011783838, y: 0.07904073, z: 0.027102709}
+--- !u!54 &5014657616231835340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706199697411864440}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6854418407250357333
 GameObject:
   m_ObjectHideFlags: 0
