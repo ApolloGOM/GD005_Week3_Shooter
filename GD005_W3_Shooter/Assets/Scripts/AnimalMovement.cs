@@ -31,7 +31,7 @@ public class AnimalMovement : MonoBehaviour
         GameObject.Find("Tara").GetComponent<PlayerMovement>().score++;
         Debug.Log(GameObject.Find("Tara").GetComponent<PlayerMovement>().score);
         Destroy(gameObject);
-        Destroy(other.gameObject);
+        Destroy(other.gameObject);  
     }
 }
 
