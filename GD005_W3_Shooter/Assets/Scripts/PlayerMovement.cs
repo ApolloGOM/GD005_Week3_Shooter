@@ -15,13 +15,22 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
+      // Update is called once per frame
     void Update()
     {
        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
+
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+
+       if (moveDirection != Vector3.zero)
+        {
+            transform.forward = moveDirection;
+        }
+
+
 
         scoreText.text = "Score: " + score;
 
@@ -31,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           Instantiate(projectile, transform.position, projectile.transform.rotation);
+           Instantiate(projectile, transform.position, transform.rotation);
         }
         #region
         if (transform.position.x < -xRange)
@@ -44,9 +53,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        float verticalInput = Input.GetAxis("Vertical");
-
-        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
+      
 
         if (transform.position.z > 15f)
         {
